@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	pb "github.com/LuisAcerv/btchdwallet/proto/btchdwallet"
 	crypt "github.com/firmfoundation/btcutil/pkg/crypt"
 	hdwallet "github.com/firmfoundation/btcutil/pkg/hdwallet"
 )
@@ -12,5 +13,11 @@ func main() {
 
 	crypt.CreateRandSeed()
 
-	hdwallet.CreateHDWallet()
+	var hd *pb.Response
+	hd = hdwallet.CreateHDWallet()
+	fmt.Printf("address : %v\n", hd.Address)
+
+	var dhd *pb.Response
+	dhd = hdwallet.DecodeHDWallet(hd.Mnemonic)
+	fmt.Printf("restored address : %v", dhd.Address)
 }
