@@ -1,6 +1,6 @@
 # Bitcoin HD wallet , mnemonic and balance
 
-##what is it ?
+## What is it ?
 
 boilerplate code for for generating random mnemonic sentence and  bitcoin HD wallet address (private key, public key and address).
 
