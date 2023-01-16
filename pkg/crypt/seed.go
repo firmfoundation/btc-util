@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-func RandByte() string {
+func CreateRandSeed() string {
 	key := make([]byte, 8)
 
 	_, err := rand.Read(key)
