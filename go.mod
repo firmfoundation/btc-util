@@ -4,6 +4,7 @@ go 1.19
 
 require (
 	github.com/LuisAcerv/btchdwallet v0.0.0-20200802014842-cc7fde1007e3 // indirect
+	github.com/blockcypher/gobcy v2.0.1+incompatible // indirect
 	github.com/brianium/mnemonic v0.0.0-20180124190051-72af92c51f88 // indirect
 	github.com/btcsuite/btcd v0.20.1-beta // indirect
 	github.com/btcsuite/btcutil v1.0.2 // indirect

@@ -17,7 +17,15 @@ func main() {
 	hd = hdwallet.CreateHDWallet()
 	fmt.Printf("address : %v\n", hd.Address)
 
-	var dhd *pb.Response
-	dhd = hdwallet.DecodeHDWallet(hd.Mnemonic)
-	fmt.Printf("restored address : %v", dhd.Address)
+	var info *pb.Response
+	//get any address for testing from https://www.blockchain.com/explorer/
+	var tmpAddress string = "35PCtVR7U9FF5atdCSfrztLXfQa3Mm17wo"
+	info = hdwallet.GetBalance(tmpAddress)
+
+	btc := float64(info.Balance) * 0.00000001
+	fmt.Println("btcoin balance ", btc)
+
+	// var dhd *pb.Response
+	// dhd = hdwallet.DecodeHDWallet(hd.Mnemonic)
+	// fmt.Printf("restored address : %v", dhd.Address)
 }
